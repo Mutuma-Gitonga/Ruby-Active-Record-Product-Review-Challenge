@@ -9,6 +9,8 @@ puts "Creating users..."
 user1 = User.create(name: Faker::Name.name)
 user2 = User.create(name: Faker::Name.name)
 user3 = User.create(name: Faker::Name.name)
+user4 = User.create(name: Faker::Name.name)
+
 
 puts "Creating products..."
 product1 = Product.create(name: "Stapler", price: 10)
@@ -47,6 +49,7 @@ product5.reviews << review1
 
 # USER reviews
 user1.reviews << review4
+user1.reviews << review6
 
 user2.reviews << review5
 user2.reviews << review3
@@ -54,5 +57,6 @@ user2.reviews << review3
 user3.reviews << review2
 user3.reviews << review1
 
+user4.reviews << review7
 
 puts "Seeding done!"
